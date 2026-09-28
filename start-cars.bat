@@ -7,4 +7,4 @@ if %errorlevel%==0 (
     exit /b 0
 )
 
-npm run dev -- --host 127.0.0.1 --port 3001 --strictPort --open /-/index.html
+npm run dev -- --host 127.0.0.1 --port 3001 --strictPort --open /
