@@ -1,7 +1,3 @@
 {
-  "projects": {
-    "npm run build": "fir-demo-project"
-  },
-  "targets": {},
-  "etags": {}
+  "projects": {}
 }

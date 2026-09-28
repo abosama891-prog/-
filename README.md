@@ -42,6 +42,19 @@ npm run build
 npx firebase-tools deploy --only hosting
 ```
 
+## قاعدة البيانات Firestore
+
+1. من Firebase Console فعّل Firestore Database واختر وضع الإنتاج.
+2. من Authentication فعّل مزود Anonymous.
+3. انسخ إعدادات تطبيق الويب إلى ملف `.env` باسم المتغيرات الموجودة في `.env.example`.
+4. انشر القواعد والاستضافة:
+
+```powershell
+npx firebase-tools deploy --only firestore:rules,hosting
+```
+
+عند وجود إعدادات Firebase، تُحفظ بيانات السيارات وسجل الوقود وسعر التموين في Firestore داخل المستند `fleet/company`. إذا لم تُضف الإعدادات، يستمر التطبيق في العمل محليًا باستخدام `localStorage`.
+
 إعداد Firebase يعيد توجيه جميع مسارات التطبيق إلى صفحة React، ويمنع تخزين نسخة قديمة من التطبيق أو عامل الخدمة.
 
 > ملاحظة: بيانات الأسطول والحسابات محفوظة محليًا في المتصفح، ولا تُرفع إلى Firebase ولا تتشارك بين المستخدمين أو الأجهزة.
